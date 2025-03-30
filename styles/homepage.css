@@ -1,0 +1,276 @@
+/* ============================================================================== */
+/* HERO */
+/* ============================================================================== */
+
+.hero {
+    z-index: -1;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    padding: 6vw 12vw 8vw 12vw;
+    transition: all .5s ease;
+}
+
+.hero.trigger {
+    opacity: .2;
+}
+
+.hero * {
+    font-family: "articulat-cf", sans-serif;
+    font-style: normal;
+    color: var(--font-black);
+}
+
+.hero>div {
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 60% 60%;
+    align-items: center;
+}
+
+.hero>div div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vw;
+    gap: 1vw;
+}
+
+.hero>div div:nth-of-type(2) img {
+    margin-top: 2vw;
+    width: 31%;
+    height: 31%;
+}
+
+
+
+.hero>div>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero>div>div h1 {
+    white-space: nowrap;
+    font-size: 4.5vw;
+    line-height: 1em;
+    font-weight: var(--heavy);
+}
+
+.hero>div>div h1 span:nth-of-type(1) {
+    color: var(--beige-4);
+}
+
+.hero>div>div h1 span:nth-of-type(1) span {
+    color: var(--orange);
+}
+
+.hero>div>div>p {
+    white-space: nowrap;
+    font-size: 2.5vw;
+    line-height: 1em;
+    font-weight: var(--heavy);
+}
+
+.hero>div>div>p span {
+    font-family: yink, sans-serif;
+    font-weight: 400;
+    font-size: 2.5vw;
+    line-height: 1.7em
+}
+
+/* =================== */
+/* ICONS */
+/* =================== */
+
+.hero>div>div div {
+    width: max-content;
+    display: flex;
+    gap: .8vw;
+}
+
+.hero>div>div div a {
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+    width: 2.4vw;
+    height: 2.4vw;
+    background-color: var(--beige-4);
+    padding: .5vw;
+    border-radius: .6vw;
+    overflow: hidden;
+    transition: width 0.35s ease, background-color 0.35s ease;
+}
+
+.hero>div>div div a:hover,
+.hero>div>div div a:focus-visible {
+    width: max-content;
+    background-color: var(--orange);
+}
+
+.hero>div>div div a img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.hero>div>div div a p {
+    font-weight: var(--demi-bold);
+    color: #fff;
+    font-size: 1.3vw;
+    white-space: nowrap;
+}
+
+
+
+/* ============================================================================== */
+/* MY WORK */
+/* ============================================================================== */
+
+.my-work {
+    position: relative;
+    background-color: var(--beige-2);
+    padding: var(--my-work-padding) 4em;
+    border-radius: 110px 110px 0 0;
+    transition: all .5s ease;
+}
+
+.my-work.trigger {
+    border-radius: 0;
+}
+
+.my-work::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--beige-1);
+    z-index: -1;
+}
+
+/* outline */
+.projects-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px;
+    border: solid 1.5px var(--beige-3);
+    border-radius: 30px;
+}
+
+/* decorative lines */
+.projects-container::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: calc(100% + (var(--my-work-padding) * 2));
+    margin-top: calc(var(--my-work-padding) * -1);
+    background-color: var(--beige-4);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-container svg {
+    position: absolute;
+    stroke: var(--beige-4);
+    stroke-width: 5px;
+    stroke-dasharray: 8 14;
+    height: calc(100% + (var(--my-work-padding) * 2));
+    margin-top: calc(var(--my-work-padding) * -1);
+    width: 1.5px;
+    top: 0;
+}
+
+.projects-container svg:nth-of-type(1) {
+    left: 100px;
+}
+
+.projects-container svg:nth-of-type(2) {
+    right: 100px;
+}
+
+/* main area */
+.projects-container section {
+    background-color: var(--beige-1);
+    padding: 4em 120px;
+    border-radius: 20px;
+}
+
+.projects-container section>h2 {
+    position: relative;
+    font-size: var(--heading-font-size);
+    font-weight: var(--extra-bold);
+    line-height: var(--heading-line-height);
+    margin-bottom: 1.5em;
+    font-family: "articulat-cf", sans-serif;
+    font-style: normal;
+    color: var(--font-black);
+}
+
+.projects-container section>h2::after {
+    position: absolute;
+    content: 'featured';
+    left: 0;
+    top: -.5em;
+    translate: 0 -100%;
+    text-transform: uppercase;
+    font-family: rm-mono;
+    text-transform: uppercase;
+    font-size: .4em;
+    line-height: .8em;
+    color: var(--orange);
+}
+
+.projects-container section>h2::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 10px;
+    background-color: var(--orange);
+    left: -40px;
+    top: 0;
+}
+
+/* labels */
+.projects-container section>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em 6vw;
+    margin-bottom: 1em;
+}
+
+.projects-container section>div>div {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    background-color: var(--orange);
+    gap: .5em;
+}
+
+.projects-container section>div>div p {
+    font-family: rm-mono;
+    text-transform: uppercase;
+    font-size: var(--label-font-size);
+    color: white;
+}
+
+.projects-container section>div>div:nth-of-type(1) img {
+    height: 10px;
+    width: max-content;
+}
+
+.projects-container section>div>div:nth-of-type(2) img {
+    height: 13.5px;
+    width: max-content;
+}
+
+/* projects */
+.projects-container section ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em 6vw;
+}

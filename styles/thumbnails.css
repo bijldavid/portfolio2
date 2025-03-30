@@ -1,0 +1,214 @@
+.projects-container section ul li {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+
+
+
+
+
+/* =================== */
+/* THUMBNAIL 1 */
+/* =================== */
+
+.ferrari-container {
+    position: relative;
+}
+
+.ferrari-container article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    mask-image: url('../images/car-mask.png');
+    mask-position: center;
+    mask-mode: luminance;
+    mask-size: contain;
+}
+
+.ferrari-container h2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50% -50%;
+    text-align: center;
+
+    font-family: "tzigane-mn", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8.5vw;
+    color: #FFF302;
+    transition: all .5s ease;
+}
+
+.ferrari-container:hover h2 {
+    top: 40%;
+}
+
+
+
+
+/* =================== */
+/* THUMBNAIL 2 */
+/* =================== */
+
+.inked-container {
+    --area-gap: 1vw;
+    position: relative;
+
+    display: flex;
+    gap: var(--area-gap);
+}
+
+.inked-container>img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inked-container h2 {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-family: "tonal-variable", sans-serif;
+    line-height: 2.75vw;
+    font-variation-settings: "wdth" 400;
+    text-align: center;
+    font-size: 3vw;
+    color: #352f60;
+    opacity: 0;
+    transition: all .5s ease .25s;
+}
+
+.inked-container span {
+    display: block;
+    background-color: rgba(0, 0, 255, 0.427);
+    flex-shrink: 0;
+    border-radius: .25vw;
+    overflow: hidden;
+    filter: drop-shadow(.35vw .35vw 4px #39200370);
+    transition: all 1s ease;
+}
+
+.inked-container span img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inked-container .inked-1 {
+    z-index: 3;
+    height: 100%;
+    width: 20%;
+}
+
+/* span ---~~=====vv////|||| 1 */
+.inked-container .inked-1 span:nth-of-type(1) {
+    height: calc(100% + 7.5vw);
+    width: calc(100% + 1vw);
+    margin-left: -1vw;
+    margin-top: -7.5vw;
+}
+
+.inked-container .inked-2 {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--area-gap);
+    height: 100%;
+    width: 40%;
+}
+
+/* span ---~~=====vv////|||| 2 */
+.inked-container .inked-2 span:nth-of-type(1) {
+    height: calc(50% - (var(--area-gap) / 2));
+    width: 100%;
+}
+
+/* span ---~~=====vv////|||| 3 */
+.inked-container .inked-2 span:nth-of-type(2) {
+    height: calc(50% - (var(--area-gap) / 2));
+    width: 100%;
+}
+
+.inked-container .inked-3 {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--area-gap);
+    height: 100%;
+    width: 40%;
+}
+
+.inked-container .inked-3 .inked-3-1 {
+    display: flex;
+    gap: var(--area-gap);
+    width: 100%;
+    height: 100%;
+}
+
+/* span ---~~=====vv////|||| 4 */
+.inked-container .inked-3 .inked-3-1 span:nth-of-type(1) {
+    height: 100%;
+    width: calc(50% - (var(--area-gap) / 2));
+}
+
+/* span ---~~=====vv////|||| 5 */
+.inked-container .inked-3 .inked-3-1 span:nth-of-type(2) {
+    height: calc(100% + 2.825vw);
+    width: calc(50% - (var(--area-gap) / 2));
+    margin-top: -2.825vw;
+}
+
+
+/* span ---~~=====vv////|||| 6 */
+.inked-container .inked-3>span:nth-of-type(1) {
+    height: 40%;
+    width: 100%;
+}
+
+
+.inked-container:hover h2 {
+    opacity: 1;
+}
+
+/* span ---~~=====vv////|||| 1 */
+.inked-container:hover .inked-1 span:nth-of-type(1) {
+    translate: 0 7.5vw;
+}
+
+/* span ---~~=====vv////|||| 2 */
+.inked-container:hover .inked-2 span:nth-of-type(1) {
+    translate: 0 -4vw;
+}
+
+/* span ---~~=====vv////|||| 3 */
+.inked-container:hover .inked-2 span:nth-of-type(2) {
+    translate: 0 4vw;
+}
+
+/* span ---~~=====vv////|||| 4 */
+.inked-container:hover .inked-3 .inked-3-1 span:nth-of-type(1) {
+    translate: 0 -4.95vw;
+}
+
+/* span ---~~=====vv////|||| 5 */
+.inked-container:hover .inked-3 .inked-3-1 span:nth-of-type(2) {
+    translate: 0 2.825vw;
+}
+
+/* span ---~~=====vv////|||| 6 */
+.inked-container:hover .inked-3>span:nth-of-type(1) {
+    translate: 0 3.1vw;
+}

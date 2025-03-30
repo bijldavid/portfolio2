@@ -1,0 +1,121 @@
+/* ========================== */
+/* CSS RESET */
+/* ========================== */
+
+:root {
+    /* colors */
+    --orange: color(display-p3 1 0.423529 0 / 1);
+
+    --beige-1: color(display-p3 1 0.992 0.980 / 1);
+    --beige-2: color(display-p3 0.964 0.954 0.934 / 1);
+    --beige-3: color(display-p3 0.878 0.854 0.803 / 1);
+    --beige-4: color(display-p3 0.729 0.709 0.658 / 1);
+
+    --font-black: #292929;
+
+    --graphic-design: color(display-p3 0.901 0.278 0.278 / 1);
+    --ux-design: color(display-p3 0.278 0.686 0.901 / 1);
+    --html: color(display-p3 0.929 0.380 0.137 / 1);
+    --css: color(display-p3 0.349 0.372 0.898 / 1);
+    --javascript: color(display-p3 0.972 0.803 0.094 / 1);
+
+
+    /* fonts */
+    --heavy: 900;
+    --extra-bold: 800;
+    --bold: 700;
+    --demi-bold: 600;
+    --medium: 500;
+    --light: 400;
+
+    /* headings */
+    --heading-font-size: 2em;
+    --heading-line-height: 1em;
+
+    /* labels */
+    --label-font-size: .8em;
+    --label-line-height: 1em;
+
+    /* paragraphs */
+    --p-font-size: .8em;
+    --p-line-height: 1em;
+
+    /* padding */
+    --my-work-padding: 6em;
+
+    interpolate-size: allow-keywords;
+    scroll-behavior: smooth;
+}
+
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--orange);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+.break {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.label {
+    padding: .4em;
+    border-radius: 7.5px;
+}
+
+/* ========================== */
+/* HEADER */
+/* ========================== */
+
+header {
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+}
+
+header * {
+    font-family: rm-mono;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+header nav {
+    display: flex;
+    margin: 2em 4em;
+    justify-content: space-between;
+}
+
+header nav div {
+    display: flex;
+    gap: 2em;
+}
+
+main {
+    z-index: -2;
+    position: relative;
+    background-color: var(--beige-1);
+}
