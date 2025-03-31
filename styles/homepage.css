@@ -3,12 +3,11 @@
 /* ============================================================================== */
 
 .hero {
-    z-index: -1;
     position: sticky;
     top: 0;
     width: 100vw;
-    padding: 6vw 12vw 8vw 12vw;
-    transition: all .5s ease;
+    padding: 3vw 12vw 8vw 12vw;
+    transition: transform .1s linear, opacity .1s linear;
 }
 
 .hero.trigger {
@@ -44,8 +43,6 @@
     width: 31%;
     height: 31%;
 }
-
-
 
 .hero>div>div {
     display: flex;
@@ -131,7 +128,7 @@
 .my-work {
     position: relative;
     background-color: var(--beige-2);
-    padding: var(--my-work-padding) 4em;
+    padding: var(--padding) 4em;
     border-radius: 110px 110px 0 0;
     transition: all .5s ease;
 }
@@ -157,7 +154,7 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 15px;
-    border: solid 1.5px var(--beige-3);
+    outline: solid 1.5px var(--beige-3);
     border-radius: 30px;
 }
 
@@ -166,8 +163,8 @@
     content: '';
     position: absolute;
     width: 1px;
-    height: calc(100% + (var(--my-work-padding) * 2));
-    margin-top: calc(var(--my-work-padding) * -1);
+    height: calc(100% + (var(--padding) * 2));
+    margin-top: calc(var(--padding) * -1);
     background-color: var(--beige-4);
     top: 0;
     left: 50%;
@@ -179,8 +176,8 @@
     stroke: var(--beige-4);
     stroke-width: 5px;
     stroke-dasharray: 8 14;
-    height: calc(100% + (var(--my-work-padding) * 2));
-    margin-top: calc(var(--my-work-padding) * -1);
+    height: calc(100% + (var(--padding) * 2));
+    margin-top: calc(var(--padding) * -1);
     width: 1.5px;
     top: 0;
 }
@@ -200,7 +197,7 @@
     border-radius: 20px;
 }
 
-.projects-container section>h2 {
+.projects-container section .text-container h2 {
     position: relative;
     font-size: var(--heading-font-size);
     font-weight: var(--extra-bold);
@@ -211,7 +208,7 @@
     color: var(--font-black);
 }
 
-.projects-container section>h2::after {
+.projects-container section .text-container h2::after {
     position: absolute;
     content: 'featured';
     left: 0;
@@ -225,7 +222,7 @@
     color: var(--orange);
 }
 
-.projects-container section>h2::before {
+.projects-container section .text-container h2::before {
     position: absolute;
     content: '';
     height: 100%;
@@ -273,4 +270,113 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em 6vw;
+}
+
+
+/* ============================================================================== */
+/* ABOUT ME */
+/* ============================================================================== */
+
+.about-me {
+    position: relative;
+    background-color: var(--beige-3);
+    padding: 0 4em var(--padding) 4em;
+    transition: all .5s ease;
+    /* overflow: hidden; */
+}
+
+.about-me-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.about-me-container section {
+    padding: 4em 120px;
+}
+
+/* decorative lines */
+.about-me-container::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: calc(100% + var(--padding) - 12px);
+    background-color: var(--beige-4);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-me-container svg {
+    position: absolute;
+    stroke: var(--beige-4);
+    stroke-width: 5px;
+    stroke-dasharray: 8 14;
+    height: calc(100% + var(--padding) - 12px);
+    margin-top: 12px;
+    width: 1.5px;
+    top: 0;
+}
+
+.about-me-container svg:nth-of-type(1) {
+    left: 100px;
+}
+
+.about-me-container svg:nth-of-type(2) {
+    right: 100px;
+}
+
+
+.about-me-container section .text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-me-container section .text-container h2 {
+    position: relative;
+    font-size: var(--heading-font-size);
+    font-weight: var(--extra-bold);
+    line-height: var(--heading-line-height);
+    margin-bottom: .5em;
+    margin-left: calc(40px - 5px);
+    font-family: "articulat-cf", sans-serif;
+    font-style: normal;
+    color: var(--font-black);
+    grid-column: 2;
+}
+
+.about-me-container section .text-container p {
+    font-size: var(--p-font-size);
+    font-weight: var(--medium);
+    line-height: var(--p-line-height);
+    margin-left: calc(40px - 5px);
+    font-family: "articulat-cf", sans-serif;
+    font-style: normal;
+    color: var(--font-black);
+    grid-column: 2;
+}
+
+.about-me-container section .text-container h2::after {
+    position: absolute;
+    content: 'info';
+    left: 0;
+    top: -.5em;
+    translate: 0 -100%;
+    text-transform: uppercase;
+    font-family: rm-mono;
+    text-transform: uppercase;
+    font-size: .4em;
+    line-height: .8em;
+    color: var(--orange);
+}
+
+.about-me-container section .text-container h2::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 10px;
+    background-color: var(--orange);
+    left: -40px;
+    top: 0;
 }

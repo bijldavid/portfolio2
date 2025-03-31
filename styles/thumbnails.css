@@ -4,6 +4,7 @@
     border-radius: 10px;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    background-color: var(--beige-3);
 }
 
 
