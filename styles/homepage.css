@@ -294,6 +294,13 @@
 
 .about-me-container section {
     padding: 4em 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-me-container section .pre-container {
+    order: -1;
+    justify-self: center;
 }
 
 /* decorative lines */
@@ -329,8 +336,7 @@
 
 
 .about-me-container section .text-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-self: center;
 }
 
 .about-me-container section .text-container h2 {

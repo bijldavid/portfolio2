@@ -112,3 +112,18 @@ main {
     position: relative;
     background-color: var(--beige-1);
 }
+
+pre {
+    font-size: .55vw;
+    width: 100%;
+    color: var(--orange);
+    display: none;
+}
+
+pre {
+    display: none;
+}
+
+pre#axe-1 {
+    display: block;
+}
