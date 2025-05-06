@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // HERO
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-let heroSection = document.querySelector('.hero');
+let heroSection = document.querySelector('.hero-inner');
 let myWorkSection = document.querySelector('.my-work');
 
 let currentOpacity = 1;
@@ -71,7 +71,7 @@ window.addEventListener('scroll', function () {
     const windowHeight = window.innerHeight;
 
     // Check if the video is within the viewport
-    if (myWorkPosition < windowHeight * 0.75) {
+    if (myWorkPosition < windowHeight * 0.6) {
         myWorkSection.classList.add('trigger');
     } else {
         myWorkSection.classList.remove('trigger');
@@ -97,26 +97,3 @@ window.addEventListener('scroll', function () {
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // ABOUT ME
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-let currentIndex = 1; // Start at 1 instead of 0
-const total = 9;
-
-function cyclePreElements() {
-  // Hide all <pre> elements
-  for (let i = 1; i <= total; i++) {
-    // Adjusted range to 1-9
-    document.getElementById(`axe-${i}`).style.display = "none";
-  }
-
-  // Show the current <pre> element
-  document.getElementById(`axe-${currentIndex}`).style.display = "block";
-
-  // Move to the next index, looping back to 1
-  currentIndex = (currentIndex % total) + 1;
-}
-
-// Start the cycle every second
-setInterval(cyclePreElements, 250);
-
-// Run once on load to show the first element immediately
-cyclePreElements();

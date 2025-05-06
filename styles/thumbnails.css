@@ -7,6 +7,10 @@
     background-color: var(--beige-3);
 }
 
+.projects-container section ul li:hover {
+    outline: 2px solid var(--orange);
+}
+
 
 
 
@@ -42,11 +46,11 @@
     font-family: "tzigane-mn", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-right: 4.5vw;
-    font-size: 7vw;
+    margin-right: 4.5cqw;
+    font-size: 12cqw;
     color: #FFF302;
     opacity: 0;
-    transition: all .5s ease;
+    transition: top .5s ease, opacity .5s ease;
 }
 
 .ferrari-container:hover h2 {
@@ -62,7 +66,7 @@
 /* =================== */
 
 .inked-container {
-    --area-gap: 1vw;
+    --area-gap: 1cqw;
     position: relative;
 
     display: flex;
@@ -83,23 +87,23 @@
     left: 50%;
     translate: -50% -50%;
     font-family: "tonal-variable", sans-serif;
-    line-height: 2.75vw;
+    line-height: 3.25cqw;
     font-variation-settings: "wdth" 400;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.75cqw;
     color: #352f60;
     opacity: 0;
-    transition: all .5s ease .25s;
+    transition: opacity .5s ease .25s;
 }
 
 .inked-container span {
     display: block;
     background-color: rgba(0, 0, 255, 0.427);
     flex-shrink: 0;
-    border-radius: .25vw;
+    border-radius: .5cqw;
     overflow: hidden;
-    filter: drop-shadow(.35vw .35vw 4px #39200370);
-    transition: all 1s ease;
+    filter: drop-shadow(.35cqw .35cqw 4px #39200370);
+    transition: translate 1s ease;
 }
 
 .inked-container span img {
@@ -117,10 +121,10 @@
 
 /* span ---~~=====vv////|||| 1 */
 .inked-container .inked-1 span:nth-of-type(1) {
-    height: calc(100% + 7.5vw);
-    width: calc(100% + 1vw);
-    margin-left: -1vw;
-    margin-top: -7.5vw;
+    height: calc(100% + 7.5cqw);
+    width: calc(100% + 1cqw);
+    margin-left: -1cqw;
+    margin-top: -7.5cqw;
 }
 
 .inked-container .inked-2 {
@@ -170,9 +174,9 @@
 
 /* span ---~~=====vv////|||| 5 */
 .inked-container .inked-3 .inked-3-1 span:nth-of-type(2) {
-    height: calc(100% + 2.825vw);
+    height: calc(100% + 2.825cqw);
     width: calc(50% - (var(--area-gap) / 2));
-    margin-top: -2.825vw;
+    margin-top: -2.825cqw;
 }
 
 
@@ -189,30 +193,30 @@
 
 /* span ---~~=====vv////|||| 1 */
 .inked-container:hover .inked-1 span:nth-of-type(1) {
-    translate: 0 7.5vw;
+    translate: 0 7.5cqw;
 }
 
 /* span ---~~=====vv////|||| 2 */
 .inked-container:hover .inked-2 span:nth-of-type(1) {
-    translate: 0 -4vw;
+    translate: 0 -4cqw;
 }
 
 /* span ---~~=====vv////|||| 3 */
 .inked-container:hover .inked-2 span:nth-of-type(2) {
-    translate: 0 4vw;
+    translate: 0 4cqw;
 }
 
 /* span ---~~=====vv////|||| 4 */
 .inked-container:hover .inked-3 .inked-3-1 span:nth-of-type(1) {
-    translate: 0 -4.95vw;
+    translate: 0 -5.75cqw;
 }
 
 /* span ---~~=====vv////|||| 5 */
 .inked-container:hover .inked-3 .inked-3-1 span:nth-of-type(2) {
-    translate: 0 2.825vw;
+    translate: 0 2.5cqw;
 }
 
 /* span ---~~=====vv////|||| 6 */
 .inked-container:hover .inked-3>span:nth-of-type(1) {
-    translate: 0 3.1vw;
+    translate: 0 2.35cqw;
 }
